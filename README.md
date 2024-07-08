@@ -4,20 +4,6 @@ Este projeto é um site para a Creche Irmã Fabíola, com o objetivo de fornecer
 
 ## Estrutura de Pastas
 
-```plaintext
-CrecheIrmaFabiola/
-├── CSS/
-│   └── style.css
-├── Images/
-│   ├── Banner.svg
-│   └── logo.png
-├── Js/
-│   ├── declaracao_conclusao_aluno.js
-│   ├── declaracao_matricula.js
-│   └── declaracao_transferencia.js
-├── index.html
-└── README.md
-
 ## Descrição dos Arquivos
 
 ### Pasta CSS
@@ -42,3 +28,20 @@ CrecheIrmaFabiola/
 ### Arquivo README
 
 - **README.md**: Documentação do projeto.
+
+
+```plaintext
+CrecheIrmaFabiola/
+├── CSS/
+│   └── style.css
+├── Images/
+│   ├── Banner.svg
+│   └── logo.png
+├── Js/
+│   ├── declaracao_conclusao_aluno.js
+│   ├── declaracao_matricula.js
+│   └── declaracao_transferencia.js
+├── index.html
+└── README.md
+
+
