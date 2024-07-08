@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Creche Irmã Fabíola</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="shortcut icon" type="imagex/png" href="/Images/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+  <section id="home" class="d-flex">
+    <div class="container-fluid align-self-center">
+      <div class="row">
+        <!-- Essa row existe pra centralizar a div -->
+        <div class="col-10 mx-auto">
+          <div class="row">
+            <!-- Metade da tela para a logo -->
+            <div class="d-none d-md-block col-md-6">
+              <img src="Images/logo.png" class="img-fluid" alt="">
+            </div>
+            <!-- Metade da tela para o Menu -->
+            <div class="col-12 col-md-6 mx-auto ">
+              <!-- Opção 1 -->
+              <a href="" data-bs-toggle="offcanvas" data-bs-target="#offcanvas1">
+                <div class="row mt-5" id="link1">
+                  <div class="col-1" id="linha1">
+                    <div class="centered-line"></div>
+                  </div>
+                  <div class="col-8 me-auto pt-2 texto-info">
+                    <h3>Declaração de Conclusão de Aluno</h3>
+                  </div>
+                </div>
+              </a>
+              <!-- OFFCANVAS OPÇÃO 1 -->
+              <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas1"
+                aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvas1">Declaração de Conclusão</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="row">
+                    <div class="col-10 mx-auto">
+                      <!-- Arquivo -->
+                      <label for="doc" class="form-label">Inserir Arquivo</label>
+                      <input type="file" class="form-control" id="doc" accept=".docx">
+                      <!-- Nome do aluno -->
+                      <label for="nomeAluno" class="form-label mt-3">Nome do Aluno</label>
+                      <input type="text" class="form-control" id="nomeAluno" placeholder="Inserir nome do aluno">
+                      <!-- Nome da Mãe -->
+                      <label for="nomeMae" class="form-label mt-3">Nome da Mãe</label>
+                      <input type="text" class="form-control" id="nomeMae" placeholder="Inserir nome da mãe">
+                      <!-- Nome do Pai -->
+                      <label for="nomePai" class="form-label mt-3">Nome do Pai</label>
+                      <input type="text" class="form-control" id="nomePai" placeholder="Inserir nome do pai">
+                      <!-- Botão para gerar o documento -->
+                      <button class="btn btn-primary mt-5" onclick="generateConclusaoAluno()">Gerar Documento</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Opção 2 -->
+              <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvas2">
+                <div class="row" id="link2">
+                  <div class="col-1" id="linha2">
+                    <div class="centered-line"></div>
+                  </div>
+                  <div class="col-8 me-auto pt-2 texto-info">
+                    <h3>Declaração de Transferência</h3>
+                  </div>
+                </div>
+              </a>
+              <!-- OFFCANVAS OPÇÃO 2 -->
+              <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas2"
+                aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvas1">Declaração de Transferência</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="row">
+                    <div class="col-10 mx-auto">
+                      <!-- Arquivo -->
+                      <label for="docTransferencia" class="form-label">Inserir Arquivo</label>
+                      <input type="file" class="form-control" id="docTransferencia" accept=".docx">
+                      <!-- Nome do aluno -->
+                      <label for="nomeAluno2" class="form-label mt-3">Nome do Aluno</label>
+                      <input type="text" class="form-control" id="nomeAluno2" placeholder="Inserir nome do aluno">
+                      <!-- Nome da Mãe -->
+                      <label for="nomeMae2" class="form-label mt-3">Nome da Mãe</label>
+                      <input type="text" class="form-control" id="nomeMae2" placeholder="Inserir nome da mãe">
+                      <!-- Nome do Pai -->
+                      <label for="nomePai2" class="form-label mt-3">Nome do Pai</label>
+                      <input type="text" class="form-control" id="nomePai2" placeholder="Inserir nome do pai">
+                      <!-- Aniversário -->
+                      <label for="aniversario" class="form-label mt-3">Aniversário</label>
+                      <input type="date" class="form-control" id="aniversario">
+                      <!-- Período -->
+                      <label class="form-label mt-3" for="periodo">Período:</label>
+                      <input type="number" class="form-control" id="periodo" placeholder="Inserir um período">
+                      <!-- Ultimo dia -->
+                      <label class="form-label mt-3" for="ultimoDia">Último Dia:</label>
+                      <input type="date" class="form-control" id="ultimoDia" placeholder="Inserir o Último dia">
+                      <!-- Botão para gerar o documento -->
+                      <button class="btn btn-primary mt-5" onclick="generateTransferencia()">Gerar Documento</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Opção 3 -->
+              <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvas3">
+                <div class="row" id="link3">
+                  <div class="col-1" id="linha3">
+                    <div class="centered-line"></div>
+                  </div>
+                  <div class="col-8 me-auto pt-2 texto-info">
+                    <h3>Declaração de Matrícula</h3>
+                  </div>
+                </div>
+              </a>
+              <!-- OFFCANVAS OPÇÃO 3 -->
+              <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas3"
+              aria-labelledby="offcanvasWithBothOptionsLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvas3">Declaração de Matrícula</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="row">
+                  <div class="col-10 mx-auto">
+                    <!-- Arquivo -->
+                    <label for="docMatricula" class="form-label">Inserir Arquivo</label>
+                    <input type="file" class="form-control" id="docMatricula" accept=".docx">
+                    <!-- Sexo do Aluno -->
+                    <div class="form-check mt-3">
+                      <input type="radio" class="form-check-input" name="sexo" id="masculino" value="masculino">
+                      <label class="form-check-label" for="masculino">Masculino</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" class="form-check-input" name="sexo" id="feminino" value="feminino">
+                      <label class="form-check-label" for="feminino">Feminino</label>
+                    </div>
+                   
+                    <!-- Nome do aluno -->
+                    <label for="nomeAluno3" class="form-label mt-3">Nome do Aluno</label>
+                    <input type="text" class="form-control" id="nomeAluno3" placeholder="Inserir nome do aluno">
+                    <!-- Nome da Mãe -->
+                    <label for="nomeMae3" class="form-label mt-3">Nome da Mãe</label>
+                    <input type="text" class="form-control" id="nomeMae3" placeholder="Inserir nome da mãe">
+                    <!-- Nome do Pai -->
+                    <label for="nomePai3" class="form-label mt-3">Nome do Pai</label>
+                    <input type="text" class="form-control" id="nomePai3" placeholder="Inserir nome do pai">
+                    <!-- Período -->
+                    <label class="form-label mt-3" for="periodo2">Período:</label>
+                    <input type="number" class="form-control" id="periodo2" placeholder="Inserir um período">
+                    <!-- Botão para gerar o documento -->
+                    <button class="btn btn-primary mt-5" onclick="generateMatricula()">Gerar Documento</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Scripts customizados -->
+  <script src="Js/script.js"></script>
+  <script src="Js/declaracao_conclusao_aluno.js"></script>
+  <script src="Js/declaracao_transferencia.js"></script>
+  <script src="Js/declaracao_matricula.js"></script>
+  <!-- Bibliotecas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.45.0/docxtemplater.js"></script>
+  <script src="https://unpkg.com/pizzip@3.1.6/dist/pizzip.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+  <script src="https://unpkg.com/pizzip@3.1.6/dist/pizzip-utils.js"></script>
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
