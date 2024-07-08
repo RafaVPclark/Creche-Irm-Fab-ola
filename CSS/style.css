@@ -23,7 +23,8 @@ body, html{
 #home{
     height: 100%;
     text-align: center;
-    background: url("Images/Banner.svg") no-repeat;
+    background-color:#21A62E ;
+    background: url("../Images/Banner.svg") no-repeat;
     background-size: cover;
     
 }
