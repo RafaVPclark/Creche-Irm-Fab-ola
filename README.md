@@ -2,8 +2,6 @@
 
 Este projeto é um site para a Creche Irmã Fabíola, com o objetivo de fornecer declarações de conclusão, transferência e matrícula dos alunos. A seguir, detalharemos a organização das pastas e os arquivos contidos no projeto.
 
-## Estrutura de Pastas
-
 ## Descrição dos Arquivos
 
 ### Pasta CSS
@@ -29,6 +27,7 @@ Este projeto é um site para a Creche Irmã Fabíola, com o objetivo de fornecer
 
 - **README.md**: Documentação do projeto.
 
+## Estrutura de Pastas
 
 ```plaintext
 CrecheIrmaFabiola/
